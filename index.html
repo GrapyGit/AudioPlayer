@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Плеер</title>
+	<link href="style/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+</head>
+<body>
+    <div id ="player">
+      <div id="viz">
+          <p id="name">Text</p>
+          <canvas id="myCanvas"></canvas>
+          
+          <div id="equalizer">
+            <h1 id ="defolt">Дефолтный настройки</h1>
+            <img src="img/cross.png"  onclick="equalizer()"></img>
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:b">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:c">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:d">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:e">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:j">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:h">
+            <input type="range" min="-10" max="10" value="0" class="slider" style =" grid-area:k">
+            <p style =" grid-area:y">65Hz</p>
+            <p style =" grid-area:u">160Hz</p>
+            <p style =" grid-area:i">400Hz</p>
+            <p style =" grid-area:o">1KHz</p>
+            <p style =" grid-area:p">2.5kHz</p>
+            <p style =" grid-area:n">6kHz</p>
+            <p style =" grid-area:m">14kHz</p>
+          </div>
+
+          <div id ="up">
+            <div id="progress">
+              <span id="time">1</span>
+              <div id="value"></div>
+              <span id="timeEnd">rgueirhg</span>
+            </div>
+              <img src="img/equalizer.png" onclick="equalizer()"></img>
+              <img src="img/back.png" onclick="back()"></img> 
+              <img src="img/pause.png" id="ps" onclick="pause()"></img>
+              <img src="img/next.png" onclick="next()"></img>
+              <div id="voc"><img src="img/sound-on.png" id="off" /><input type="range" min="0" max="100" value="50"  class="slider"></div>
+          </div>
+
+        </div>
+     <div id="drop" dropzone>
+	 <input type="file" id="file-selector" multiple>
+         <p id="b" style="color:aliceblue; font-size: 3vw; padding-left: 20%; padding-top:20%; margin: 0%;">Выбери чёнибудь</p>
+     </div>
+    </div>
+    
+    <script src="scripts/player.js"></script>
+</body>
+</html>
+  
